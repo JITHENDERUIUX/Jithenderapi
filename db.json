@@ -2,27 +2,33 @@
   "users": [
     {
       "id": "1",
-      "name": "JAKKU JITHENDER ",
-      "email": "jithender12@gmail.com",
-      "body": "IM WORKING IN THE CLOUD SEALS COMPANY"
+      "name": "JAKKU JITHENDER",
+      "email": "jithender@123",
+      "phno": "9550931181"
     },
     {
-      "email": "CHANDU@gmail",
       "id": "2",
       "name": "PABBA CHANDANA",
-      "body": "CHINTHAL,HYDERBAD"
+      "email": "jithender@123",
+      "phno": "9704329526"
     },
     {
       "id": "3",
-      "name": "KRANTHI JAKKU",
-      "email": "kranthijakku@21gmail.com",
-      "body": "hello this is kranthi from the siddipet"
+      "name": "JAKKU ",
+      "email": "jithender@123",
+      "phno": "6302940891"
     },
     {
-      "email": "KAMLAKAR@gmail",
       "id": "4",
-      "name": "KAMALAKAR JAKKULA",
-      "body": "KAVADIGUDA,KACHIGUDA"
+      "name": "RANJITH",
+      "email": "jithender@123",
+      "phno": "9912356345"
+    },
+    {
+      "id": "5",
+      "name": "CHINTU23q4g",
+      "email": "Chintu@123345",
+      "phno": "38u98u3u93"
     }
   ]
 }

@@ -47,13 +47,13 @@ const UpdateUser=(event)=>{
       <p className='mem1'>UPDATE USER</p>
         <form onSubmit={UpdateUser} >
           <label >ID</label>
-          <input type="number" readOnly value={newuser.id } required onChange={e=>setNewuser(prev=>({...prev,id:e.target.value}))}   placeholder=""/>
+          <input type="number" readOnly value={newuser.id } required onChange={e=>setNewuser({...newuser,id:e.target.value})}   placeholder=""/>
            <label >NAME</label>
-          <input type="text"value={newuser.name } required onChange={e=>setNewuser(prev=>({...prev,name:e.target.value}))} placeholder='enter your name' />
+          <input type="text"value={newuser.name } required onChange={e=>setNewuser({...newuser,name:e.target.value})} placeholder='enter your name' />
            <label >EMAIL</label>
-          <input type="email" value={newuser.email } required onChange={e=>setNewuser(prev=>({...prev,email:e.target.value}))}  placeholder='enter your email' />
-          <label >BODY</label>
-          <textarea type="text" value={newuser.body } required onChange={e=>setNewuser(prev=>({...prev,body:e.target.value}))} placeholder='enter your description' />
+          <input type="email" value={newuser.email } required onChange={e=>setNewuser({...newuser,email:e.target.value})}  placeholder='enter your email' />
+          <label >PHNO</label>
+          <textarea type="text" value={newuser.phno } required onChange={e=>setNewuser({...newuser,phno:e.target.value})} placeholder='enter your description' />
     <div className="flex">    
 <button type="submit" className="btn btn-primary">SUBMIT</button>
 

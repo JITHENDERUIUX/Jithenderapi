@@ -26,7 +26,7 @@ useEffect(() => {
             <p>ID-NO    : <strong>  {data.id}</strong></p>
             <p>NAME  : <strong>{data.name}</strong></p>
             <p>EMAIL  : <strong>{data.email}</strong></p>
-            <p>BODY   : <strong>{data.body}</strong></p>
+            <p>PHNO   : <strong>{data.phno}</strong></p>
 </div>
           
           <div className="text-center">

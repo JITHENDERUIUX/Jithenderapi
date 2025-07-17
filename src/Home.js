@@ -76,7 +76,7 @@ else
             <th>ID</th>
             <th>NAME</th>
             <th>EMAIL</th>
-            <th>BODY</th>
+            <th>PHNO</th>
              <th>ACTION</th>
           </tr>
           </thead>
@@ -87,7 +87,7 @@ else
             <td className='styles'> {hai.id} </td>
             <td className='styles'>{hai.name} </td>
             <td className='styles'>{hai.email} </td>
-            <td className='styles'>{hai.body} </td>
+            <td className='styles'>{hai.phno} </td>
             <td>
              <Link to={`/update/${hai.id}`} className='btn btn-primary ms-3' >UPDATE</Link>
              <Link to={`/read/${hai.id}`} className='btn btn-secondary ms-3' >READ</Link>

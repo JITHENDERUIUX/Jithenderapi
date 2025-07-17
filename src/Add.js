@@ -37,14 +37,12 @@ function Add() {
 
       <p className='mem1'>ADD USER</p>
         <form onSubmit={HandleSumbit} >
-          <label >ID</label>
-          <input type="number" required onChange={e=>setUser(prev=>({...prev,id:e.target.value}))}     placeholder='enter your id number'/>
-           <label >NAME</label>
-          <input type="text" required onChange={e=>setUser(prev=>({...prev,name:e.target.value}))}    placeholder='enter your name' />
+          <label >NAME</label>
+          <input type="text" required onChange={e=>setUser({...user,name:e.target.value})}    placeholder='enter your name' />
            <label >EMAIL</label>
-          <input type="email" required onChange={e=>setUser(prev=>({...prev,email:e.target.value}))}    placeholder='enter your email' />
-          <label >BODY</label>
-          <textarea type="text" required onChange={e=>setUser(prev=>({...prev,body:e.target.value}))}    placeholder='enter your description' />
+          <input type="email" required onChange={e=>setUser({...user,email:e.target.value})}    placeholder='enter your email' />
+          <label >PHNO</label>
+          <textarea type="text" required onChange={e=>setUser({...user,phno:e.target.value})}    placeholder='enter your description' />
     <div className="flex">    
 <button type="submit" className="btn btn-primary">SUBMIT</button>
 
