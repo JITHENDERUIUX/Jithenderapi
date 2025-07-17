@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "JAKKU JITHENDER ",
+      "email": "jithender12@gmail.com",
+      "body": "IM WORKING IN THE CLOUD SEALS COMPANY"
+    },
+    {
+      "email": "CHANDU@gmail",
+      "id": "2",
+      "name": "PABBA CHANDANA",
+      "body": "CHINTHAL,HYDERBAD"
+    },
+    {
+      "id": "3",
+      "name": "KRANTHI JAKKU",
+      "email": "kranthijakku@21gmail.com",
+      "body": "hello this is kranthi from the siddipet"
+    },
+    {
+      "email": "KAMLAKAR@gmail",
+      "id": "4",
+      "name": "KAMALAKAR JAKKULA",
+      "body": "KAVADIGUDA,KACHIGUDA"
+    }
+  ]
+}
