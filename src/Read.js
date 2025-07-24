@@ -6,10 +6,11 @@ import { Link, useParams } from 'react-router-dom'
 function Read() {
 
 const {Id}=useParams();
+    const api=process.env.REACT_APP_API_URL;
       
   const [data,setData]=useState([])
 useEffect(() => {
-  axios.get(`http://localhost:3001/users/` + Id )
+  axios.get(`${api}/${Id}`)
     .then(res =>{ console.log(res);
                setData(res.data);
     })   

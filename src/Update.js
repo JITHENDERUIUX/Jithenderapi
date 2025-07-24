@@ -8,11 +8,12 @@ function Update() {
  const Navigate=useNavigate();
  const [newuser,setNewuser]=useState({});
 
+    const api=process.env.REACT_APP_API_URL;
 
 
 useEffect(()=>{
 
-axios.get(`http://localhost:3001/users/${Id}`)
+axios.get(`${api}/${Id}`)
 .then(res=>{console.log(res);
            setNewuser(res.data);
 })
@@ -23,7 +24,7 @@ axios.get(`http://localhost:3001/users/${Id}`)
 
 const UpdateUser=(event)=>{
   event.preventDefault();
-  axios.put(`http://localhost:3001/users/${Id}`,newuser)
+  axios.put(`${api}/${Id}`,newuser)
   .then(res=>{console.log(res);
        if(window.confirm("DO YOU WANT UPDATE THE DETAILS"))
        {
@@ -47,7 +48,7 @@ const UpdateUser=(event)=>{
       <p className='mem1'>UPDATE USER</p>
         <form onSubmit={UpdateUser} >
           <label >ID</label>
-          <input type="number" readOnly value={newuser.id } required onChange={e=>setNewuser({...newuser,id:e.target.value})}   placeholder=""/>
+          <input type="number" readOnly value={Number(newuser.id) } required onChange={e=>setNewuser({...newuser,id:e.target.value})}   placeholder=""/>
            <label >NAME</label>
           <input type="text"value={newuser.name } required onChange={e=>setNewuser({...newuser,name:e.target.value})} placeholder='enter your name' />
            <label >EMAIL</label>

@@ -11,21 +11,27 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 function Home() {
 const Navigate=useNavigate();
     const {Id}=useParams();
+    const api=process.env.REACT_APP_API_URL;
+   
 
   const [data,setData]=useState([])
 useEffect(() => {
-  axios.get(`http://localhost:3001/users`)
+  axios.get(`${api}`)
     .then(res =>{ console.log(res);
                setData(res.data);
     })   
     .catch(err => console.log("Error fetching data:", err));
 }, []);
+
+
+
+
 const HandleDelete=(Id)=>{
 
 const confirm=window.confirm("Would you like to delete the user??")
 if (confirm)
 {
-  axios.delete(`http://localhost:3001/users/` + Id)
+  axios.delete(`${api}/${Id}`)
   .then(res=>{
     alert("USER DETAILS ARE DELETED");
     window.location.reload();
@@ -63,6 +69,8 @@ else
   return (
    
    <div className="App">
+
+    
       
         <table className='table table-striped '>
        <thead><tr>
@@ -82,9 +90,9 @@ else
           </thead>
 
   <tbody> 
-    {data.map((hai,bye)=>(
-          <tr key={bye} className='second mt-5'>
-            <td className='styles'> {hai.id} </td>
+    {data.map((hai)=>(
+          <tr key={Number(hai.id)} className='second mt-5'>
+            <td className='styles'> {Number(hai.id)} </td>
             <td className='styles'>{hai.name} </td>
             <td className='styles'>{hai.email} </td>
             <td className='styles'>{hai.phno} </td>
@@ -99,6 +107,7 @@ else
           ))}
           </tbody>
        </table>
+       
     </div>
 
 
